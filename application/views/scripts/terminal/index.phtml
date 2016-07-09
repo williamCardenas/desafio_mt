@@ -1,0 +1,42 @@
+<div class="page-contents container">
+  <?php if(!isset($this->sshConnection)) :?>
+    <div class="row">
+      <div class="col-sm-4 col-sm-offset-4">
+
+        <?php if(isset($this->message)) :?>
+          <?php foreach($this->message as $message): ?>
+            <div class="notification">
+              <?php echo $message ?>
+            </div>
+          <?php endforeach;?>
+        <?php endif;?>
+
+        <?php
+        $this->form->setAction($this->url());
+        echo $this->form;
+        ?>
+
+      </div>
+    </div>
+  <?php else:?>
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="terminal">
+          <p><span class="server">[<?php echo $this->sshConnection->user."@".$this->sshConnection->host ?>]</span> Welcome!</p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-9">
+        <div class="form-group">
+          <input type="text" name="command" class="form-control"/>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="form-group">
+        <button type="button" name="command" class="form-control" >enviar </button>
+      </div>
+      </div>
+    </div>
+  <?php endif;?>
+</div>

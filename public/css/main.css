@@ -8934,3 +8934,11 @@ button.close {
     display: none !important;
   }
 }
+.terminal {
+  height: 300px;
+  margin-bottom: 20px;
+  background-color: #000;
+}
+.terminal p {
+  color: #fff;
+}
