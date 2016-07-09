@@ -32,19 +32,22 @@
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li class="active">
+            <?php $active = (!isset($this->controllerName))? 'active' : '' ?>
+            <li class="<?php echo $active ?>">
               <a href="<?php echo $this->url( array('controller'=>''),'default',true) ?>">
                 <span class="icon fa fa-home"></span> Home
               </a>
             </li>
-            <li>
+            <?php $active = (isset($this->controllerName) and $this->controllerName=='terminal')? 'active' : '' ?>
+            <li class="<?php echo $active ?>">
               <a href="<?php echo $this->url( array('controller'=>'terminal'),'default',true) ?>">
                 <span class="icon fa fa-desktop"></span> Terminal
               </a>
             </li>
-            <li>
+            <?php $active = (isset($this->controllerName) and $this->controllerName=='criptografia')? 'active' : '' ?>
+            <li class="<?php echo $active ?>">
               <a href="#">
-                <span class="icon fa fa-group"></span> Team
+                <span class="icon fa fa-shield"></span> Criptografia
               </a>
             </li>
             <li>

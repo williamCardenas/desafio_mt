@@ -13,7 +13,6 @@ class TerminalController extends Zend_Controller_Action
     Zend_Session::start();
     $request = $this->getRequest();
     $form    = new Application_Form_SshLogin();
-
     if ($this->getRequest()->isPost())
     {
       if ($form->isValid($request->getPost()))
@@ -29,7 +28,7 @@ class TerminalController extends Zend_Controller_Action
         }
       }
     }
-
+    $this->view->controllerName = $request->getControllerName();
     $this->view->form = $form;
   }
 
