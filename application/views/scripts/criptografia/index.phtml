@@ -1,0 +1,20 @@
+<div class="page-contents container">
+    <div class="row">
+      <div class="col-sm-12">
+
+        <?php if(isset($this->message)) :?>
+          <?php foreach($this->message as $message): ?>
+            <div class="notification">
+              <?php echo $message ?>
+            </div>
+          <?php endforeach;?>
+        <?php endif;?>
+
+        <?php
+        $this->form->setAction($this->url());
+        echo $this->form;
+        ?>
+
+      </div>
+    </div>
+</div>

@@ -46,7 +46,7 @@
             </li>
             <?php $active = (isset($this->controllerName) and $this->controllerName=='criptografia')? 'active' : '' ?>
             <li class="<?php echo $active ?>">
-              <a href="#">
+              <a href="<?php echo $this->url( array('controller'=>'criptografia'),'default',true) ?>">
                 <span class="icon fa fa-shield"></span> Criptografia
               </a>
             </li>
