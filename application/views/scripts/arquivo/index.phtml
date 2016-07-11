@@ -1,0 +1,61 @@
+<div class="page-contents container">
+  <div class="row">
+    <div class="col-sm-12">
+      <button type="button" class="btn btn-default novo-arquivo" data-toggle="modal" data-target="#newImage">Nova Imagem</button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12">
+
+      <?php if(isset($this->message)) :?>
+        <?php foreach($this->message as $message): ?>
+          <div class="notification">
+            <?php echo $message ?>
+          </div>
+        <?php endforeach;?>
+      <?php endif;?>
+
+      <table class="table table-striped">
+        <tr>
+          <th>id</th>
+          <th>Arquivo</th>
+          <th>status</th>
+          <th>modificar</th>
+        </tr>
+        <?php foreach ($this->entries as $entry): ?>
+          <tr>
+          <td><?php echo $this->escape($entry->id) ?></td>
+          <td><?php echo $this->escape($entry->name) ?></td>
+          <td><?php echo $this->escape($entry->getStatusFile()) ?></td>
+          <td>
+            <button type="button" class="btn btn-default arquivo"
+            arquivo-id="<?php echo $this->escape($entry->id) ?>"
+            data-toggle="modal" data-target="#newImage">Substituir imagem</button>
+          </td>
+        </tr>
+        <?php endforeach ?>
+      </table>
+
+    </div>
+  </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="newImage" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Imagem</h4>
+      </div>
+      <div class="modal-body">
+        <?php
+        $this->form->setAction($this->url());
+        echo $this->form;
+        ?>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+      </div>
+    </div>
+  </div>
+</div>

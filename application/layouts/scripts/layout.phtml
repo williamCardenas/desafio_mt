@@ -1,9 +1,9 @@
 <!doctype html>
-<html class="no-js" lang="pt-br" ng-app>
+<html class="no-js" lang="pt-br" >
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Bootstrappin&#39; Portfolio</title>
+  <title>Mt4 desafio</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -50,9 +50,10 @@
                 <span class="icon fa fa-shield"></span> Criptografia
               </a>
             </li>
-            <li>
-              <a href="#">
-                <span class="icon fa fa-envelope"></span> Contact
+            <?php $active = (isset($this->controllerName) and $this->controllerName=='arquivo')? 'active' : '' ?>
+            <li class="<?php echo $active ?>">
+              <a href="<?php echo $this->url( array('controller'=>'arquivo'),'default',true) ?>">
+                <span class="icon fa fa-file"></span> Arquivo
               </a>
             </li>
           </ul>
@@ -67,6 +68,7 @@
 
   <script src="js/vendor/jquery-1.12.0.min.js"></script>
   <script src="js/terminal.js"></script>
+  <script src="js/arquivo.js"></script>
   <script src="js/plugins.js"></script>
   <script src="js/main.js"></script>
 

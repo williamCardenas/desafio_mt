@@ -20,7 +20,13 @@
           <layoutScriptFile layoutName="layout"/>
         </layoutScriptsDirectory>
       </layoutsDirectory>
-      <modelsDirectory/>
+      <modelsDirectory>
+        <dbTableDirectory>
+          <dbTableFile dbTableName="Arquivo"/>
+        </dbTableDirectory>
+        <modelFile modelName="ArquivoMapper"/>
+        <modelFile modelName="Arquivo"/>
+      </modelsDirectory>
       <modulesDirectory enabled="false"/>
       <servicesDirectory enabled="false"/>
       <viewsDirectory>

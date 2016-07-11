@@ -1,0 +1,11 @@
+DROP TABLE IF EXISTS arquivo;
+
+CREATE TABLE arquivo (
+    id int NOT NULL AUTO_INCREMENT,
+    name varchar(250) NOT NULL DEFAULT '',
+    created DATETIME NOT NULL,
+    updated DATETIME NOT NULL,
+    PRIMARY KEY (id)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+CREATE INDEX id ON arquivo(id);
