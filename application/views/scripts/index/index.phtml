@@ -21,6 +21,9 @@
       <p>
         Para o desafio de auditoria, foi utilizada o DateTime do php e a função filemtime do php para obter a ultima data em que o arquivo teve modificação, se as datas created, e updated forem diferentes, o arquivo foi reenviado pelo usuário pelo form de edição do registro; se a data em que o arquivo foi modificado não coincidir com a data updated no banco de dados, o arquivo foi sobre escrito ou sofreu alguma alteração (foi violado); Se as datas de create, update e edição do arquivo forem iguais, sabemos que este é o arquivo original (enviado pelo usuário através do formulário)
       </p>
+      <p>
+        Tambem é necessario criar um banco de dados chamados mt4 com a tabela arquivo, sql para a criação da tabela está no arquivo application/scripts/schema.mysql.sql. E configurar o usuario e senha no arquivo application/configs/application.ini.
+      </p>
 
     </div>
   </div>
