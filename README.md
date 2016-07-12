@@ -1,2 +1,2 @@
 # desafio_mt
-teste para seleção de candidatos
+Veja as informações adicionais na home do projeto
