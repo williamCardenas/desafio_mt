@@ -13,10 +13,8 @@ class CriptografiaController extends Zend_Controller_Action
     $request = $this->getRequest();
     $form    = new Application_Form_Criptografia();
 
-    if ($request->isPost())
+    if ($request->isPost() and $form->isValid($request->getPost()))
     {
-      if ($form->isValid($request->getPost()))
-      {
         $criptografia = new Application_Model_Criptografia();
         try {
           if($request->getPost('action') == 'cript')
@@ -30,7 +28,7 @@ class CriptografiaController extends Zend_Controller_Action
             $flashMessenger = $this->_helper->getHelper('FlashMessenger');
             $flashMessenger->addMessage('mensagem descriptografada: '.$message);
             $this->view->message = $flashMessenger->getMessages();
-          }elseif ($request->getPost('action') == 'descript')
+          }else
           {
             $message = $criptografia->decrypt($request->getPost('text'),$request->getPost('key'));
             $flashMessenger = $this->_helper->getHelper('FlashMessenger');
@@ -42,7 +40,6 @@ class CriptografiaController extends Zend_Controller_Action
           $flashMessenger->addMessage($e->getMessage());
           $this->view->message = $flashMessenger->getMessages();
         }
-      }
     }
     $this->view->controllerName = $request->getControllerName();
     $this->view->form = $form;

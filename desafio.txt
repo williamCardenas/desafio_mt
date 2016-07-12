@@ -1,0 +1,33 @@
+Gostaria de propor um desenvolvimento prático, pois acredito que é uma ótima maneira de você expressar o seu conhecimento e experiência.
+
+A proposta é que você crie um microssistema que possua três funções básicas. O escopo abaixo é bem macro, sinta-se à vontade para desenvolver funções adicionais e escolher a melhor arquitetura.
+
+Função 1 - Integração SSH:
+
+Criar uma tela onde o usuário possa informar um IP, username e password de um equipamento. Nessa tela deve haver um textbox onde o usuário poderá digitar comandos e pedir para executar no equipamento informado. Feito isso, você deve conetar-se via ssh, executar o comando e apresentar a retorno ao usuário.
+
+Fique à vontade em adicionar funções relacionadas à esse tipo de integração.
+
+Função 2 - Criptografia:
+
+Criar uma tela em que usuário informe um texto e o sistema retorne esse texto criptografado com AES256 (utilizar SALT). Essa tela deve ser capaz de receber um texto já criptografado, nesse caso o usuário deve informar a chave de criptografia, e descriptografar uma essa informação.
+
+Procure explorar nesse teste as melhores práticas relacionadas à criptografia de dados. Fique à vontade para adicionar quaisquer funcionalidades e mesmo adicionar o uso de outros algorítimos que julgue interessante.
+
+Função 3 - Auditoria:
+
+
+
+Criar uma tela onde o usuário faça o upload de um arquivo e guarde o registro na base (o arquivo pode ser guardado em disco e o somente o path na base).
+
+Criar uma listagem desses arquivos com uma ação para que o usuário possa subir um novo arquivo. Ao receber esse novo arquivo, o sistema deve ser capaz de auditar e validar se o arquivo novo é exatamente o mesmo que foi "upado" anteriormente. O sistema tem que ser capaz de validar se o arquivo que está no disco não foi violado. É importante criar um mecanismo que permita ao sistema fazer essa validação. Explique o método adotado para garantir a integridade do arquivo.
+
+A ideia geral desse item é a de que o usuário disponha de uma ferramenta para saber se o arquivo sofreu alguma modificação.
+
+Você pode utilizar o ZendFramework (http://framework.zend.com) como base para o seu desenvolvimento ou fazer em PHP puro, a decisão é sua. Pode utilizar um framework de CSS (ex.: bootstrap) sem problemas.
+
+É importante que todo o desenvolvimento seja realizado com orientação à objetos, se quiser usar algum design pattern de sua preferência fique à vontade.
+
+A versão do Zend que utilizamos é a 1.12 (http://framework.zend.com/manual/1.12/en/manual.html).
+
+É importante que junto com cada item seja enviado um texto explicativo com as funções desenvolvidas e os motivos das suas escolhas durante a implementação do projeto.

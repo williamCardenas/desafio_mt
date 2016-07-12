@@ -3,7 +3,7 @@ class Application_Model_Criptografia
 {
 
   # Private key
-  private $salt = 'Lu70K$i3pu5xf7*I8tNmd@x2oODwwDRr4&xjuyTh';
+  private $salt = 'K$i3pu5xf7*I8tNmd@W1i2l3l4i5a6m7&xjuyTh';
 
 
   # Encrypt a value using AES-256.

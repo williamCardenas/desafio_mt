@@ -1,5 +1,4 @@
 <?php
-require_once('Git.php');
 
 class ArquivoController extends Zend_Controller_Action
 {

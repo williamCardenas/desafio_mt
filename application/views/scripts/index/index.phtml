@@ -1,43 +1,27 @@
-<style>
-    a:link,
-    a:visited
-    {
-        color: #0398CA;
-    }
-
-    span#zf-name
-    {
-        color: #91BE3F;
-    }
-
-    div#welcome
-    {
-        color: #FFFFFF;
-        background-image: url(http://framework.zend.com/images/bkg_header.jpg);
-        width:  600px;
-        height: 400px;
-        border: 2px solid #444444;
-        overflow: hidden;
-        text-align: center;
-    }
-
-    div#more-information
-    {
-        background-image: url(http://framework.zend.com/images/bkg_body-bottom.gif);
-        height: 100%;
-    }
-</style>
-<div id="welcome">
-    <h1>Welcome to the <span id="zf-name">Zend Framework!</span></h1>
-
-    <h3>This is your project's main page</h3>
-
-    <div id="more-information">
-        <p><img src="http://framework.zend.com/images/PoweredBy_ZF_4LightBG.png" /></p>
-        <p>
-            Helpful Links: <br />
-            <a href="http://framework.zend.com/">Zend Framework Website</a> |
-            <a href="http://framework.zend.com/manual/en/">Zend Framework Manual</a>
-        </p>
+<div class="page-contents container">
+  <div class="row">
+    <div class="col-sm-12 text-center">
+      <h1>Bem vindo</h1>
     </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12">
+      <p>
+        Este é o resultado de 5 dias de trabalho e aprendizado, no menu você tem acesso aos módulos que compõem o desafio descrito no e-mail e pode ser lido no arquivo desafio.txt no diretório root.
+      </p>
+      <p>
+        Para o desenvolvimento foi usado o zend framework na versão 1.12, jquery para algumas interações e manipulação de ajax, bootstrapp para o desenvolvimento das telas e less para o processamento de css em algumas partes.
+      </p>
+      <p>
+        Para o desafio de integração com ssh, foi utilizado a extensão ssh2 do php, que para o correto funcionamento deve ser instalado (ver http://php.net/manual/pt_BR/book.ssh2.php), é importante ressaltar que para algumas distribuições linux, é necessário configurar o Se Linux para o correto funcionamento. Uma vez que o php consegue se conectar via ssh com o servidor, o usuário pode entrar com os comandos a serem executados no campo texto e ver o retorno no terminal (ação enviada ao php via ajax).
+      </p>
+      <p>
+        Para o desafio de criptografia com sha256 e salt, foi utilizada a extensão mcrypt, que necessita ser instalado no servidor. Para criptografar o texto, é necessário uma string de 32 caracteres ou maior para ser a chave salt.
+      </p>
+      <p>
+        Para o desafio de auditoria, foi utilizada o DateTime do php e a função filemtime do php para obter a ultima data em que o arquivo teve modificação, se as datas created, e updated forem diferentes, o arquivo foi reenviado pelo usuário pelo form de edição do registro; se a data em que o arquivo foi modificado não coincidir com a data updated no banco de dados, o arquivo foi sobre escrito ou sofreu alguma alteração (foi violado); Se as datas de create, update e edição do arquivo forem iguais, sabemos que este é o arquivo original (enviado pelo usuário através do formulário)
+      </p>
+
+    </div>
+  </div>
 </div>

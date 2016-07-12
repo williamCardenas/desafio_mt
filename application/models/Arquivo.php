@@ -89,7 +89,10 @@ class Application_Model_Arquivo
 
   public function getStatusFile()
   {
-    $fileUpdateDate = new DateTime(date("Y-m-d H:i:s", filemtime(PUBLIC_PATH.'/upload//'.$this->_name)));
+    if(!is_file(PUBLIC_PATH.'/upload//'.$this->_name)){
+      return 'Arquivo não existe ou foi apagado';
+      $fileUpdateDate = new DateTime(date("Y-m-d H:i:s", filemtime(PUBLIC_PATH.'/upload//'.$this->_name)));
+    }
     $createdDate = new DateTime($this->_created);
     $updatedDate = new DateTime($this->_updated);
     $diferenceCreatedUpdated = $createdDate->diff($updatedDate);
